@@ -174,6 +174,32 @@ map <F7> :w<CR> :!g++ % -O && ./%< <CR>
 autocmd BufWinLeave *.* mkview
 autocmd BufWinEnter *.* silent loadview
 
+" ==================== "
+"
+" ==================== "
+" swap colon with semi-colon
+nnoremap ; :
+nnoremap : ;
+nnoremap :Q :q
+nnoremap :W :w
+nnoremap :Wq :wq
+nnoremap :WQ :wq
+
+" ======================================== "
+"    vim-go"--¬
+" ======================================== "
+au FileType go nmap <leader>r  <Plug>(go-run)
+au FileType go nmap <leader>b  <Plug>(go-build)
+au FileType go nmap <leader><leader>t  <Plug>(go-test)
+au FileType go nmap <leader>c  :GoCoverageBrowser<cr>
+au FileType go nmap <leader>gd <Plug>(go-doc)
+au FileType go nmap <leader>dh <Plug>(go-def-split)
+au FileType go nmap <leader>dv <Plug>(go-def-vertical)
+au FileType go nmap <leader>i  <Plug>(go-info)
+let g:go_fmt_command = "goimports"
+let g:go_doc_keywordprg_enabled= 0
+
+
 " ===== "
 " Netrw
 " ===== "
