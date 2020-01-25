@@ -199,7 +199,6 @@ au FileType go nmap <leader>i  <Plug>(go-info)
 let g:go_fmt_command = "goimports"
 let g:go_doc_keywordprg_enabled= 0
 
-
 " ===== "
 " Netrw
 " ===== "
@@ -262,7 +261,6 @@ set statusline+=\ \«\ %L
 set statusline+=\ \«\ %P
 set statusline+=\ %y\ 
 
-
 " Change the status line color depending on the mode we are on
 function! InsertStatuslineColor(mode)
   if a:mode == 'i'
@@ -278,7 +276,6 @@ au InsertEnter * call InsertStatuslineColor(v:insertmode)
 au InsertLeave * hi statusline ctermfg=8 ctermbg=15 guifg=#545454 guibg=#DBDFE0
 hi StatusLine      ctermfg=8  ctermbg=15   guifg=#545454 guibg=#DBDFE0
 hi StatusLineNC    ctermfg=8  ctermbg=0    guifg=#828D92 guibg=#545454  gui=none
-
 
 " ==== "
 " Fold
@@ -423,11 +420,6 @@ nnoremap <A-Right> :call ChangeColorScheme()<CR>
 
 " : echo colors_name<CR>
 nnoremap <A-Left> :echo colors_name<CR>
-
-
-
-
-
 
 " ============================== "
 " To open vimrc
