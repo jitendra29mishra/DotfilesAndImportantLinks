@@ -247,20 +247,38 @@ let g:indentLine_setConceal=0
 " ========== "
 " StatusLine
 " ========== "
-set statusline=
-set statusline+=\ %F " File name with complete path
-" set statusline+=\ %{expand('%:~:.')}
-set statusline+=%#CursorColumn#
-set statusline+=\ %y
-set statusline+=[%{expand('%:e')}]
-set statusline+=\ [%{&fileencoding?&fileencoding:&encoding}]
-" set statusline+=\[%{&fileformat}\]
+set statusline=\ \»\  
+set statusline+=%t
+if exists("*fugitive#head")
+    set statusline+=\ %{fugitive#head()}
+endif
+set statusline+=\ %m
+set statusline+=\ %r
 set statusline+=%=
-set statusline+=\ Per:\ %p%% " Percentage of line read or view
-set statusline+=\ CL:\ %l " Current line position
-set statusline+=\ TL:\ %L " Total number of lines in current buffer
-set statusline+=\ C:\ %c  " Current column position of cursor
-set statusline+=\ %{strftime('[%b\ %d,\ %Y]\ [%a]')} " Day and Date
+set statusline+=\ %{strlen(&fenc)?&fenc:'none'}
+set statusline+=\ \«\ %{&ff}
+set statusline+=\ \«\ %l,%c
+set statusline+=\ \«\ %L
+set statusline+=\ \«\ %P
+set statusline+=\ %y\ 
+
+
+" Change the status line color depending on the mode we are on
+function! InsertStatuslineColor(mode)
+  if a:mode == 'i'
+    hi statusline ctermfg=7 ctermbg=0 guifg=white guibg=black
+  elseif a:mode == 'r'
+    hi statusline ctermfg=5 ctermbg=0 guifg=#C05266 guibg=black
+  else
+    hi statusline ctermfg=1 ctermbg=0 guifg=black
+  endif
+endfunction
+
+au InsertEnter * call InsertStatuslineColor(v:insertmode)
+au InsertLeave * hi statusline ctermfg=8 ctermbg=15 guifg=#545454 guibg=#DBDFE0
+hi StatusLine      ctermfg=8  ctermbg=15   guifg=#545454 guibg=#DBDFE0
+hi StatusLineNC    ctermfg=8  ctermbg=0    guifg=#828D92 guibg=#545454  gui=none
+
 
 " ==== "
 " Fold
