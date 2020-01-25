@@ -404,6 +404,31 @@ endfunction
 nnoremap <leader>j :call AddEmptyLineBelow()<CR>
 nnoremap <leader>k :call AddEmptyLineAbove()<CR>
 
+function! ChangeColorScheme()
+python3 << endpy
+import vim
+import random
+lst = vim.eval("getcompletion('', 'color')")
+color_value = random.choices(lst)[0]
+try:
+    vim.command("color {}".format(color_value))
+except:
+    vim.command("echo {}".format(color_value))
+endpy
+endfunction
+" 
+nnoremap <A-Right> :call ChangeColorScheme()<CR>
+" " Auto Run below command to select random theme
+" "exec ChangeColorScheme()
+
+" : echo colors_name<CR>
+nnoremap <A-Left> :echo colors_name<CR>
+
+
+
+
+
+
 " ============================== "
 " To open vimrc
 nnoremap <leader>v :e ~/.vimrc<CR>
