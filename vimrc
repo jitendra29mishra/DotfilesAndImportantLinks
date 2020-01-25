@@ -7,9 +7,7 @@ filetype off
 set rtp+=$vundle
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
-call vundle#end()
 
-call vundle#begin()
 Plugin 'SirVer/ultisnips'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'Yggdroot/indentLine'
