@@ -6,9 +6,7 @@
 
 **Blog - SHAP & SAGE**
 * https://iancovert.com/
+* https://iancovert.com/blog/understanding-shap-sage/
 
 **Neural Network**
 * https://github.com/julrog/nn_vis
-
-**Alogrithm**
-* https://iancovert.com/blog/understanding-shap-sage/
