@@ -10,3 +10,6 @@
 
 **Neural Network**
 * https://github.com/julrog/nn_vis
+
+**Blog - Visualization**
+* https://www.storytellingwithdata.com/blog
