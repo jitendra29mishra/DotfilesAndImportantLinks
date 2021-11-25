@@ -17,6 +17,7 @@
 
 **R - ML**
 * http://varianceexplained.org/files/loess.html
+* https://r4ds.had.co.nz/index.html
 
 **Bloggers**
 * http://varianceexplained.org/
