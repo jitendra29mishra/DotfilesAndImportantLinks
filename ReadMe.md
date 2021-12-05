@@ -1,5 +1,6 @@
 **Julia**
 * https://courses.smp.uq.edu.au/MATH2504/
+* https://datasciencejuliahackers.com/
 
 **Blog - C++**
 * https://mariusbancila.ro/blog/
