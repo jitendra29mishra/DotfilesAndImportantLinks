@@ -20,6 +20,7 @@
 * http://varianceexplained.org/files/loess.html
 * https://r4ds.had.co.nz/index.html
 * https://adv-r.hadley.nz/
+* https://mhahsler.github.io/Introduction_to_Data_Mining_R_Examples/book/index.html
 
 **Bloggers**
 * http://varianceexplained.org/
