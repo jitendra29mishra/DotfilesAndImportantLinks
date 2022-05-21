@@ -32,3 +32,6 @@
 * https://www.knowledgeisle.com/
 * https://www.knowledgeisle.com/wp-content/uploads/
 * https://runawayhorse001.github.io/LearningApacheSpark/
+
+**Optimizations**
+* https://laurentlessard.com/teaching/524-intro-to-optimization/
